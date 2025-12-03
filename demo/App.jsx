@@ -1,40 +1,32 @@
 import React from "react";
-import { Button, Card, Input } from "@jitendra/ui";
+import "./App.css";
+import { renderCardFromJSON } from "@jitendra/ui";
+
+const payloads = [
+  { type: "YES_NO", question: "Are you over 18?" },
+  {
+    type: "RADIO_OPTIONS",
+    question: "Choose a plan",
+    options: ["Starter", "Growth", "Enterprise"],
+  },
+  {
+    type: "MULTI_SELECT",
+    question: "Select toppings",
+    options: ["Cheese", "Olives", "Onion"],
+  },
+  {
+    type: "TEXT_INPUT",
+    question: "Any additional notes?",
+    placeholder: "Type here...",
+  },
+];
 
 export default function App() {
   return (
     <main className="demo-shell">
-      <header>
-        <h1>@jitendra/ui Demo</h1>
-        <p>Quick preview of Button, Card, and Input components.</p>
-      </header>
-
-      <section>
-        <h2>Buttons</h2>
-        <div className="stack">
-          <Button onClick={() => alert("Primary clicked")}>Primary Button</Button>
-          <Button variant="secondary">Secondary Button</Button>
-          <Button size="lg">Large Button</Button>
-        </div>
-      </section>
-
-      <section>
-        <h2>Card</h2>
-        <Card
-          title="Demo Card"
-          footer={<Button size="sm">Action</Button>}
-        >
-          <p>This card renders any children placed inside it.</p>
-        </Card>
-      </section>
-
-      <section>
-        <h2>Inputs</h2>
-        <div className="stack">
-          <Input label="Full name" placeholder="Enter your name" />
-          <Input label="Email" type="email" error="Invalid email" />
-        </div>
-      </section>
+      {payloads.map((payload, idx) => (
+        <div key={idx}>{renderCardFromJSON(payload)}</div>
+      ))}
     </main>
   );
 }

@@ -114,6 +114,51 @@ export function InputDemo() {
 
 Each component accepts a `className` prop so you can extend or override the default styling. You can also wrap these primitives with your own components to enforce design-system standards.
 
+## Deterministic Card renderer (ui-cards)
+
+Build form-like cards directly from JSON while keeping the UI deterministic and predictable.
+
+```js
+import { renderCardFromJSON } from "@jitendra/ui";
+
+const payload = {
+  type: "RADIO_OPTIONS",
+  question: "Pick your plan",
+  options: ["Starter", "Growth", "Enterprise"],
+};
+
+const card = renderCardFromJSON(payload);
+```
+
+Supported payload shapes:
+
+```ts
+// YES/NO
+{ type: "YES_NO", question: "Are you over 18?" }
+
+// Radio list (single select)
+{ type: "RADIO_OPTIONS", question: "Pick one", options: ["A", "B"] }
+
+// Checkbox list (multi select)
+{ type: "MULTI_SELECT", question: "Pick many", options: ["A", "B"] }
+
+// Text input
+{ type: "TEXT_INPUT", question: "Share feedback", placeholder?: string }
+```
+
+Validation happens automatically; missing fields throw developer-friendly errors before render. You can also import each card directly:
+
+```js
+import {
+  YesNoCard,
+  RadioOptionsCard,
+  MultiSelectCard,
+  TextInputCard,
+} from "@jitendra/ui";
+
+<YesNoCard question="Is this helpful?" />;
+```
+
 ## Project Structure
 
 ```

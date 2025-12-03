@@ -1,0 +1,56 @@
+/* Shared styling for deterministic UI cards */
+
+.ui-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.ui-card__question {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.ui-card__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ui-card__inputs--inline {
+  flex-direction: row;
+}
+
+.ui-card__option {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.ui-card__option input {
+  accent-color: #0b5fff;
+}
+
+.ui-card__text-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5f5;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.ui-card__text-input:focus {
+  outline: none;
+  border-color: #0b5fff;
+  box-shadow: 0 0 0 3px rgba(11, 95, 255, 0.2);
+}
