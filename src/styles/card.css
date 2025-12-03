@@ -1,0 +1,33 @@
+/* Card styles for @jitendra/ui */
+
+.jit-card {
+  background: #ffffff;
+  border: 1px solid #e6e9ef;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(18, 20, 26, 0.04);
+  overflow: hidden;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.jit-card__header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f1f3f6;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0b2a66;
+  background: #fbfdff;
+}
+
+.jit-card__body {
+  padding: 16px;
+  font-size: 14px;
+  color: #122033;
+}
+
+.jit-card__footer {
+  padding: 12px 16px;
+  border-top: 1px solid #f1f3f6;
+  font-size: 13px;
+  color: #586674;
+  background: #fbfdff;
+}

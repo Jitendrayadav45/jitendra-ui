@@ -1,0 +1,38 @@
+/* Input styles for @jitendra/ui */
+
+.jit-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.jit-input__label {
+  font-size: 13px;
+  color: #334155;
+}
+
+.jit-input__field {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d7e3;
+  font-size: 14px;
+  color: #0b1a33;
+  background: #ffffff;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.jit-input__field:focus {
+  outline: none;
+  border-color: #0b5fff;
+  box-shadow: 0 0 0 4px rgba(11, 95, 255, 0.08);
+}
+
+.jit-input__field--error {
+  border-color: #ff645e;
+}
+
+.jit-input__error {
+  color: #b42318;
+  font-size: 12px;
+}

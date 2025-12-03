@@ -1,0 +1,65 @@
+/* Button styles for @jitendra/ui */
+
+.jit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font: 600 14px/1 "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 120ms ease, transform 120ms ease, box-shadow 120ms ease;
+  background: #0b5fff;
+  color: #ffffff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.jit-btn:active {
+  transform: translateY(1px);
+}
+
+.jit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Variants */
+.jit-btn--primary {
+  background: linear-gradient(180deg, #0b5fff 0%, #084fd6 100%);
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.jit-btn--secondary {
+  background: #f5f7fb;
+  color: #0b2a66;
+  border-color: #dfe7fb;
+}
+
+/* Sizes */
+.jit-btn--sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.jit-btn--md {
+  padding: 0.5rem 1rem;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+.jit-btn--lg {
+  padding: 0.75rem 1.25rem;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+/* Focus ring */
+.jit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(11, 95, 255, 0.12);
+}
